@@ -10,7 +10,7 @@ int main()
 	HINSTANCE hinstLib;
 
 	bool info = GetUILanguageInfo(MUI_LANGUAGE_NAME, userLanguagesMultiString, NULL, 0, &langCount);
-	if (!info)
+	if (info)
 	{
 		setlocale(LC_ALL, "");
 		hinstLib = LoadLibrary(TEXT("HelloModule_ru_ru.dll"));
