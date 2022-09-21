@@ -7,14 +7,15 @@ int main()
 {
 	WCHAR userLanguagesMultiString[] = L"ru-RU\0\0";
 	DWORD langCount = 0;
+	HINSTANCE hinstLib;
+
 	bool info = GetUILanguageInfo(MUI_LANGUAGE_NAME, userLanguagesMultiString, NULL, 0, &langCount);
-	if (info)
+	if (!info)
 	{
 		setlocale(LC_ALL, "");
-	}
-	//setlocale(LC_ALL, "RUS");
-	HINSTANCE hinstLib;
-	hinstLib = LoadLibrary(TEXT("HelloModule_ru_ru.dll"));
+		hinstLib = LoadLibrary(TEXT("HelloModule_ru_ru.dll"));
+	} else 
+		hinstLib = LoadLibrary(TEXT("HelloModule_en_us.dll"));
 	char qwe[100];
 	LoadStringA(hinstLib, HELLO_MUI_STR_0, qwe, sizeof(qwe));
 
