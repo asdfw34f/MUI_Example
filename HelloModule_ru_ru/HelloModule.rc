@@ -52,7 +52,7 @@ END
 
 STRINGTABLE
 BEGIN
-    HELLO_MUI_STR_0         "Котик говорит мяу"
+    HELLO_MUI_STR_0         "для такого котика, как ты, %1, %2!d!  - отличный возраст»"
 END
 
 #endif    // Русский (Россия) resources

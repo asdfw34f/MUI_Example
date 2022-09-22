@@ -52,7 +52,7 @@ END
 
 STRINGTABLE
 BEGIN
-    HELLO_MUI_STR_0         "Kotik says meow"
+    HELLO_MUI_STR_0         "for kotik like you, %1, %2!d!  - is the best age"
 END
 
 #endif    // Русский (Россия) resources
